@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>心跳</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #heart {
+        margin: 200px;
+        display: inline-block;
+        position: relative;
+        animation: 650ms heart infinite alternate-reverse;
+      }
+      @keyframes heart {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(1.2);
+        }
+      }
+
+      #heart > .left {
+        width: 80px;
+        background: red;
+        height: 80px;
+        position: absolute;
+        transform: rotate(45deg) translateX(30px);
+        bottom: 50px;
+        left: -50px;
+        border-radius: 50% 0% 0% 50%;
+      }
+      #heart > .right {
+        background: red;
+
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        transform: rotate(45deg) translateY(30px);
+        bottom: 50px;
+        right: -50px;
+        border-radius: 50% 50% 0% 0%;
+      }
+      #heart > .bottom {
+        background: red;
+        width: 80px;
+        height: 80px;
+        transform: rotate(45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="heart">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="bottom"></div>
+    </div>
+  </body>
+</html>
